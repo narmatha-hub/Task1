@@ -33,7 +33,7 @@
     <section id="about">
         <div class="container">
             <h3>About Me</h3>
-            <p>I'm a final year BCA student with a keen interest in web development, programming, and database management.  I'm always eager to learn new technologies and improve my skills.</p>
+            <p>I'm a final year BCA student with a keen interest in web development, programming, and database management. I'm always eager to learn new technologies and improve my skills.</p>
             <p>Currently, I am studying a Java course at an institute to enhance my programming skills and broaden my knowledge in software development.</p>
         </div>
     </section>
@@ -43,17 +43,15 @@
             <h3>Skills</h3>
             <div class="skills-container">
                 <div class="skill">
-                    <h4>HTML , CSS & JavaScript </h4>
+                    <h4>HTML, CSS & JavaScript</h4>
                     <p>Proficient in creating responsive and visually appealing web pages using HTML and CSS.</p>
                 </div>
-               
                 <div class="skill">
-                    <h4>PHP,C++ & MySQL</h4>
+                    <h4>PHP, C++ & MySQL</h4>
                     <p>Knowledgeable in backend development with PHP and managing databases using MySQL.</p>
                 </div>
-               
                 <div class="skill">
-                    <h4>  Java</h4>
+                    <h4>Java</h4>
                     <p>Currently learning Java programming to develop robust and scalable applications.</p>
                 </div>
             </div>
@@ -71,21 +69,23 @@
                 </div>
                 <div class="project">
                     <h4>Portfolio Website</h4>
-                    <p>This personal portfolio showcases my skills and  projects. It's built using HTML, CSS, and JavaScript.</p>
+                    <p>This personal portfolio showcases my skills and projects. It's built using HTML, CSS, and JavaScript.</p>
                 </div>
-              
             </div>
         </div>
     </section>
 
     <section id="education">
-        <div class="education-item">
-            <h4>BCA - Bachelor of Computer Applications</h4>
-            <p>[University of Madras] - Expected Graduation: [2025]</p>
-        </div>
-        <div class="education-item">
-            <h4>Relevant Courses</h4>
-            <p>Web Development, Java, Database Management,PhP</p>
+        <div class="container">
+            <h3>Education</h3>
+            <div class="education-item">
+                <h4>BCA - Bachelor of Computer Applications</h4>
+                <p>[University of Madras] - Expected Graduation: [2025]</p>
+            </div>
+            <div class="education-item">
+                <h4>Relevant Courses</h4>
+                <p>Web Development, Java, Database Management, PHP</p>
+            </div>
         </div>
     </section>
 
@@ -94,14 +94,31 @@
             <h3>Contact Me</h3>
             <p>If you'd like to get in touch, please fill out the form below:</p>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form id="contactForm" action="#" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required><br>
                     <input type="email" name="email" placeholder="Your Email" required><br>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+           
+            var name = document.querySelector('input[name="name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+            
+            
+            alert('Name: ' + name + '\n' + 'Email: ' + email + '\n' + 'Message: ' + message);
+            
+          
+            document.getElementById('contactForm').reset();
+        });
+    </script>
 </body>
 </html>
